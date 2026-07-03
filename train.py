@@ -9,7 +9,7 @@ from model import gradient_descent, model, text_cleaning
 # from utils import predict
 
 def main():
-    data = pd.read_csv('/Users/a0000/coding_folder/logistic regression/spam.csv')
+    data = pd.read_csv('spam.csv')
 
     data['Clean_Message'] = data['Message'].apply(text_cleaning) # Cleaning Text
     data['Category'] = data['Category'].map({"spam":1, "ham":0}).astype(int)
